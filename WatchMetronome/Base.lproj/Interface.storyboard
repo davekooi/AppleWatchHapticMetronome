@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchMetronome" customModuleProvider="target">
+                    <items>
+                        <label width="156" height="62" alignment="left" text="0" textAlignment="center" id="3ph-kB-wKf">
+                            <fontDescription key="font" type="system" weight="thin" pointSize="68"/>
+                        </label>
+                        <label width="156" alignment="left" text="BPM" textAlignment="center" id="DYJ-g8-8Aa"/>
+                        <button width="1" alignment="left" title="START" id="CMY-NE-WOB">
+                            <color key="backgroundColor" red="0.16078431372549018" green="0.50196078431372548" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="24"/>
+                            <connections>
+                                <action selector="PressedStartStopButton" destination="AgC-eL-Hgc" id="ru1-SM-VtJ"/>
+                            </connections>
+                        </button>
+                        <slider width="1" alignment="left" value="100" minimum="40" maximum="218" steps="10" id="fZ9-Ka-xHa">
+                            <connections>
+                                <action selector="pressedSlider:" destination="AgC-eL-Hgc" id="r2Y-5Z-TM6"/>
+                            </connections>
+                        </slider>
+                    </items>
+                    <connections>
+                        <outlet property="myLabel" destination="3ph-kB-wKf" id="knp-to-gU4"/>
+                        <outlet property="slider" destination="fZ9-Ka-xHa" id="LNP-ts-2fX"/>
+                        <outlet property="startStopButton" destination="CMY-NE-WOB" id="q0J-SR-if1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="219.69230769230771" y="344.79487179487182"/>
+        </scene>
+    </scenes>
+</document>
